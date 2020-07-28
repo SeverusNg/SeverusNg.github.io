@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://SeverusNg.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-07-28T19:41:49.876Z</updated>
+    <title>蒟蒻博客</title>
+    <updated>2020-07-28T19:57:41.848Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://SeverusNg.github.io"/>
     <link rel="self" href="http://SeverusNg.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>http://SeverusNg.github.io/images/avatar.png</logo>
     <icon>http://SeverusNg.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, 蒟蒻博客</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>http://SeverusNg.github.io/post/hello-gridea/</id>
