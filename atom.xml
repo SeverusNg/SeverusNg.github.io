@@ -2,44 +2,165 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://SeverusNg.github.io</id>
     <title>蒟蒻博客</title>
-    <updated>2020-07-28T19:57:41.848Z</updated>
+    <updated>2020-07-28T20:19:15.965Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://SeverusNg.github.io"/>
     <link rel="self" href="http://SeverusNg.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>蒟蒻博客</subtitle>
     <logo>http://SeverusNg.github.io/images/avatar.png</logo>
     <icon>http://SeverusNg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 蒟蒻博客</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>http://SeverusNg.github.io/post/hello-gridea/</id>
-        <link href="http://SeverusNg.github.io/post/hello-gridea/">
+        <title type="html"><![CDATA[重启博客]]></title>
+        <id>http://SeverusNg.github.io/post/chong-qi-bo-ke/</id>
+        <link href="http://SeverusNg.github.io/post/chong-qi-bo-ke/">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <updated>2020-07-28T20:08:05.000Z</updated>
+        <content type="html"><![CDATA[<p>说来也巧，因为疫情，上了好几个月的网课，其实也就是摸了好几个月的鱼～<br>
+最近在梁博老师的信息课上，遇到了一个初一的小孩，rui_er刷的题比我还多，知识点学的也比我丰富。而且我更羡慕的是他的年龄，才刚刚初一啊～梁老师在课上提到，学oi主要靠自学和做题，他认识的大佬都是自己主动积极打cf比赛，以及写题解博客。<br>
+我又不是巨佬，我只是一只爱吃蒟蒻的蒟蒻，但是听梁老师这么一说，想起来许久之前，我也建过一个博客。<br>
+还得从初三说起～<br>
+（未完待续）</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用Python+Tesseract实现图片转文字]]></title>
+        <id>http://SeverusNg.github.io/post/shi-yong-pythontesseract-shi-xian-tu-pian-zhuan-wen-zi/</id>
+        <link href="http://SeverusNg.github.io/post/shi-yong-pythontesseract-shi-xian-tu-pian-zhuan-wen-zi/">
+        </link>
+        <updated>2020-07-28T20:04:40.000Z</updated>
+        <content type="html"><![CDATA[<hr>
+<p>title: 使用Python+Tesseract实现图片转文字<br>
+date: 2019-06-15 10:42:41<br>
+tags:</p>
+<hr>
+<h1 id="前言">前言</h1>
+<p>端午节第二天，早晨吃完竹筒饭后，10:00左右收到老师微信，为了弥补我吃的一顿霸王餐，需要把图片转成word发给老师。一共6张图片，打字的话大概40分钟。但我好歹是个OIer（虽然提高组没拿到奖 ），怎么可能打40分钟的字呢？要是有办法能自动转换，这样的事情以后一劳永逸啊。</p>
+<p>经过长达6小时的百度和实践后，我成功实现了图片转文字。但是在这个过程中，有许多博客时间过于古老，错误频出。所以准备写一篇关于Tesseract实现图片转文字（OCR）的博客。</p>
+<h1 id="生产环境">生产环境</h1>
+<p>系统 macOS Sierra 10.12.6</p>
+<p>语言 Python3.6</p>
+<p>软件 Homebrew</p>
+<h1 id="安装程序">安装程序</h1>
+<h2 id="升级生产环境">升级生产环境</h2>
+<p>安装／升级软件至与生产环境中相同</p>
+<h2 id="安装tesseract">安装Tesseract</h2>
+<p>打开Terminal</p>
+<p>输入指令</p>
+<pre><code class="language-shell">brew install tesseract
+</code></pre>
+<p>下载完毕后，输入指令查看版本</p>
+<pre><code class="language-shell">tesseract --version
+</code></pre>
+<p>如果输出tesseract x.x.x 那么恭喜你，下载成功，如果报错。那么请再次下载，直至成功。</p>
+<h2 id="安装pytesseract">安装Pytesseract</h2>
+<p>输入指令</p>
+<pre><code class="language-shell">pip3 install pytesseract
+</code></pre>
+<p>下载完毕后，进入下一阶段。</p>
+<h2 id="安装中文语言包">安装中文语言包</h2>
+<p>打开https://github.com/tesseract-ocr/tessdata</p>
+<p>下载其中的<a href="https://github.com/tesseract-ocr/tessdata/blob/master/chi_sim.traineddata">chi_sim.traineddata</a></p>
+<p>将该文件复制到</p>
+<p>/usr/local/Cellar/tesseract/4.0.0（版本号）/share/tessdata</p>
+<p>如果根目录下没有显示usr文件</p>
+<p>同时按下<code>Command+shift+.</code>可显示隐藏文件。</p>
+<p>复制完后，输入</p>
+<pre><code class="language-shell">tesseract --list-langs
+</code></pre>
+<p>显示的语言中若包含<code>chi_sim</code>，说明安装成功。</p>
+<h1 id="简单使用方法">简单使用方法</h1>
+<p>新建文件夹，编辑一个新的python文件。输入</p>
+<pre><code class="language-python">import pytesseract
+from PIL import Image
+
+open image
+
+file = open('输出文件.txt','w')
+for i in range(1,7):
+	image = Image.open('需要识别的图片.jpg')
+	code = pytesseract.image_to_string(image, lang='chi_sim')
+	file.write(code)
+	file.write('\n')
+file.close()
+</code></pre>
+<p>运行该程序，会识别文件夹下（需要识别的图片.jpg），并生成（输出文件.txt ）</p>
+<p>更多Python相关基础语法本篇博客不做介绍</p>
+<p>更多关于pytesseract的使用方法请移步<a href="https://pypi.org/project/pytesseract/">Pytesseract官网</a></p>
+<p>更多关于tesseract的使用方法请移步<a href="https://github.com/tesseract-ocr/tesseract/wiki">Tesseract官方Wiki</a></p>
+<h1 id="训练模型">训练模型</h1>
+<p>挖坑待填</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SSL证书即https前缀获取方法]]></title>
+        <id>http://SeverusNg.github.io/post/ssl-zheng-shu-ji-https-qian-zhui-huo-qu-fang-fa/</id>
+        <link href="http://SeverusNg.github.io/post/ssl-zheng-shu-ji-https-qian-zhui-huo-qu-fang-fa/">
+        </link>
+        <updated>2020-07-28T20:00:53.000Z</updated>
+        <content type="html"><![CDATA[<hr>
+<p>title: SSL证书即https前缀获取方法<br>
+date: 2019-06-16 13:44:32<br>
+tags:</p>
+<hr>
+<h1 id="前言">前言</h1>
+<p>博客网站建立后，准备引入BidVertiser广告系统。但是需要https前缀，使用SSL证书。SSL证书使用不是很麻烦，速度也比较快。</p>
+<h1 id="生产环境">生产环境</h1>
+<p>系统 Ubuntu 18.04 x64</p>
+<p>软件 Nginx</p>
+<h1 id="购买ssl证书">购买SSL证书</h1>
+<p>登陆阿里云账号，前往SSL证书<a href="https://common-buy.aliyun.com/?spm=5176.2020520163.cas.3.487ewFPZwFPZbR&amp;commodityCode=cas#/buy">购买页面</a>，选择免费DV型 SSL。</p>
+<p>购买后绑定域名，提交审核。</p>
+<p>审核速度通常很快（1小时内）。</p>
+<p>审核通过后前往<a href="https://yundunnext.console.aliyun.com/?spm=5176.12818093.recent.dcas.488716d0XHrUZR&amp;p=cas#/overview/cn-hangzhou">证书管理页面</a>，点击所购买证书中的下载，在弹窗中选择Nginx下载。</p>
+<h1 id="部署ssl证书">部署SSL证书</h1>
+<h2 id="传输证书">传输证书</h2>
+<p>将下载后的证书解压，解压后的文件夹重命名为cert，通过FTP将cert文件夹传输到服务器的/etc/nginx/目录下。</p>
+<h2 id="设置配置">设置配置</h2>
+<p>进入服务器的/etc/nginx/conf.d目录下，打开defualt（或者你自己的配置文件）</p>
+<p>更改原有文件内容为</p>
+<pre><code class="language-shell">server {
+    listen 443;
+    server_name www.xxx.com; #你的域名
+    ssl on;
+    root /var/www/xxx.com; #你的站点位置
+    index index.html index.htm;
+    ssl_certificate  cert/xxx.pem;#你的证书名字
+    ssl_certificate_key cert/xxx.key;#你的证书名字
+    ssl_session_timeout 5m;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    location / {
+        index index.html index.htm;
+    }
+}
+server {
+    listen 80;
+    server_name www.xxx.com;#你的域名
+    rewrite ^(.*)$ https://$host$1 permanent;#把http的域名请求转成https
+}
+</code></pre>
+<p><code>1_xxx.pem</code> 改为证书<code>.pem文件</code>的名称（在阿里云上下载下来的文件解压后的文件夹内）</p>
+<p><code>2_xxx.key</code> 改为证书<code>.key文件</code>的名称（在阿里云上下载下来的文件解压后的文件夹内）</p>
+<p><code>www.xxx.com</code>改为你的<code>域名</code></p>
+<p><code>/var/www/xxx.com</code>改为你的<code>站点位置</code></p>
+<p>全部更改完后，配置文件就设置完成了。</p>
+<h1 id="启用ssl证书">启用SSL证书</h1>
+<h2 id="检查">检查</h2>
+<p>输入</p>
+<pre><code class="language-shell">nginx -t
+</code></pre>
+<p>检查Nginx配置文件是否设置成功</p>
+<p>如果显示<code>successful</code>代表成功。否则情重复上一步骤。</p>
+<h2 id="重启">重启</h2>
+<p>输入</p>
+<pre><code class="language-shell">nginx -s reload
+</code></pre>
+<p>重启Nginx，使SSL证书部署生效。</p>
+<p>重启后，SSL证书就部署完成了。</p>
+<h2 id="查看效果">查看效果</h2>
+<p>可以输入<code>https://（你的域名）</code>查看效果。</p>
 ]]></content>
     </entry>
 </feed>
