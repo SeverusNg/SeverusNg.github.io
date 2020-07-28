@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://SeverusNg.github.io</id>
+    <id>https://SeverusNg.github.io</id>
     <title>蒟蒻博客</title>
-    <updated>2020-07-28T20:19:15.965Z</updated>
+    <updated>2020-07-28T20:30:33.900Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://SeverusNg.github.io"/>
-    <link rel="self" href="http://SeverusNg.github.io/atom.xml"/>
+    <link rel="alternate" href="https://SeverusNg.github.io"/>
+    <link rel="self" href="https://SeverusNg.github.io/atom.xml"/>
     <subtitle>蒟蒻博客</subtitle>
-    <logo>http://SeverusNg.github.io/images/avatar.png</logo>
-    <icon>http://SeverusNg.github.io/favicon.ico</icon>
+    <logo>https://SeverusNg.github.io/images/avatar.png</logo>
+    <icon>https://SeverusNg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 蒟蒻博客</rights>
     <entry>
         <title type="html"><![CDATA[重启博客]]></title>
-        <id>http://SeverusNg.github.io/post/chong-qi-bo-ke/</id>
-        <link href="http://SeverusNg.github.io/post/chong-qi-bo-ke/">
+        <id>https://SeverusNg.github.io/post/chong-qi-bo-ke/</id>
+        <link href="https://SeverusNg.github.io/post/chong-qi-bo-ke/">
         </link>
         <updated>2020-07-28T20:08:05.000Z</updated>
         <content type="html"><![CDATA[<p>说来也巧，因为疫情，上了好几个月的网课，其实也就是摸了好几个月的鱼～<br>
@@ -25,8 +25,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[使用Python+Tesseract实现图片转文字]]></title>
-        <id>http://SeverusNg.github.io/post/shi-yong-pythontesseract-shi-xian-tu-pian-zhuan-wen-zi/</id>
-        <link href="http://SeverusNg.github.io/post/shi-yong-pythontesseract-shi-xian-tu-pian-zhuan-wen-zi/">
+        <id>https://SeverusNg.github.io/post/shi-yong-pythontesseract-shi-xian-tu-pian-zhuan-wen-zi/</id>
+        <link href="https://SeverusNg.github.io/post/shi-yong-pythontesseract-shi-xian-tu-pian-zhuan-wen-zi/">
         </link>
         <updated>2020-07-28T20:04:40.000Z</updated>
         <content type="html"><![CDATA[<hr>
@@ -94,8 +94,8 @@ file.close()
     </entry>
     <entry>
         <title type="html"><![CDATA[SSL证书即https前缀获取方法]]></title>
-        <id>http://SeverusNg.github.io/post/ssl-zheng-shu-ji-https-qian-zhui-huo-qu-fang-fa/</id>
-        <link href="http://SeverusNg.github.io/post/ssl-zheng-shu-ji-https-qian-zhui-huo-qu-fang-fa/">
+        <id>https://SeverusNg.github.io/post/ssl-zheng-shu-ji-https-qian-zhui-huo-qu-fang-fa/</id>
+        <link href="https://SeverusNg.github.io/post/ssl-zheng-shu-ji-https-qian-zhui-huo-qu-fang-fa/">
         </link>
         <updated>2020-07-28T20:00:53.000Z</updated>
         <content type="html"><![CDATA[<hr>
