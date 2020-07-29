@@ -9,7 +9,7 @@
 <meta name="description" content="蒟蒻爱吃蒟蒻～">
 <meta name="theme-color" content="#000">
 <title>蒟蒻博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1596054008794">
+<link rel="shortcut icon" href="/favicon.ico?v=1596056959484">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1024,10 +1024,20 @@
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://SeverusNg.github.io/post/ci-xiao-sheng-cheng-shu-xue-xi-bi-ji/"" data-c="
-          &lt;p&gt;新坑待填&lt;/p&gt;
-&lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
-&lt;p&gt;最小生成树&lt;/p&gt;
-&lt;h1 id=&#34;问题解析&#34;&gt;问题解析&lt;/h1&gt;
+          &lt;h1 id=&#34;前置知识&#34;&gt;前置知识&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;最小生成树Kurskal算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;引入问题&#34;&gt;引入问题&lt;/h1&gt;
+&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
+&lt;p&gt;一个有 n 个结点的连通图的生成树是原图的极小连通子图，且包含原图中的所有 n 个结点，并且有保持图连通的&lt;u&gt;&lt;strong&gt;次少&lt;/strong&gt;&lt;/u&gt;的边。&lt;/p&gt;
+&lt;h2 id=&#34;模板题&#34;&gt;模板题&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.luogu.com.cn/problem/P4180&#34;&gt;洛谷P4180 [BJWC2010]严格次小生成树&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;解决方法&lt;/h1&gt;
+&lt;h2 id=&#34;想法&#34;&gt;想法&lt;/h2&gt;
+&lt;p&gt;把所有生成树按照权值之和从小到小排序，求排在第二位的生成树。注意，如果最小生成树不唯一，次小生成树的权值和最小生成树相同。&lt;/p&gt;
+&lt;p&gt;解法一:次小生成树不会和最小生成树相同，因此可以枚举最小生成树中不在次小生成树中出现的边。 注意最小生成树只有n-1条边，所以只需枚举n-1次。每次在剩下的边里，求一次最小生成树。&lt;/p&gt;
+&lt;p&gt;复杂度O&lt;/p&gt;
 ">次小生成树学习笔记</a>
       </div>
       
