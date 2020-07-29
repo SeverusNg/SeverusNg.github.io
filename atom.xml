@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SeverusNg.github.io</id>
     <title>蒟蒻博客</title>
-    <updated>2020-07-29T03:52:35.900Z</updated>
+    <updated>2020-07-29T04:01:07.115Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SeverusNg.github.io"/>
     <link rel="self" href="https://SeverusNg.github.io/atom.xml"/>
-    <subtitle>蒟蒻博客</subtitle>
+    <subtitle>蒟蒻爱吃蒟蒻～</subtitle>
     <logo>https://SeverusNg.github.io/images/avatar.png</logo>
     <icon>https://SeverusNg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 蒟蒻博客</rights>
@@ -20,7 +20,14 @@
 最近在梁博老师的信息课上，遇到了一个初一的小孩，rui_er刷的题比我还多，知识点学的也比我丰富。而且我更羡慕的是他的年龄，才刚刚初一啊～梁老师在课上提到，学oi主要靠自学和做题，他认识的大佬都是自己主动积极打cf比赛，以及写题解博客。<br>
 我又不是巨佬，我只是一只爱吃蒟蒻的蒟蒻，但是听梁老师这么一说，想起来许久之前，我也建过一个博客。<br>
 还得从初三说起～<br>
-（未完待续）</p>
+当时特长生考试完，闲的无聊，就用hexo搭建了一个博客。<br>
+里面大概写了一点瞎搞的技术博文，后来就不了了之了，一是因为换电脑，而是因为hexo写博客真的很麻烦。然后那个网站就永久关闭了～<br>
+结合之前的博客经验，外加两位梁老师都推荐写博客，我就在有了重启博客的计划。<br>
+只不过这一次写博客不像上次那样没有经验，我想信竞选手这么多，应该有一些比较完美的解决方案～<br>
+百度了一下“洛谷 写博客”，果然看到了一篇洛谷日报是关于写博客的，点进去一看，里面推荐了一个很强的东西，貌似是今年（2020年）3月份刚开发出来的，一个可以直接一件部署的博客客户端——gridea<br>
+再一看效果展示，感觉很不错，仔细一看名字，我去，就是跟我一个课外班的那个初一同学——rui_er，这位巨佬初一就写的文章居然就上了洛谷日报......<br>
+然后呢，就是下载gridea，买了一个阿里云的学生优惠北京ECS，但是需要备案......<br>
+没办法，就只能用githu提供的仓库来搞，然后，就是现在这个样子～</p>
 ]]></content>
     </entry>
     <entry>
