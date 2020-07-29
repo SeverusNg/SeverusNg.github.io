@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SeverusNg.github.io</id>
     <title>蒟蒻博客</title>
-    <updated>2020-07-29T19:32:50.527Z</updated>
+    <updated>2020-07-29T19:45:16.017Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SeverusNg.github.io"/>
     <link rel="self" href="https://SeverusNg.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://SeverusNg.github.io/images/avatar.png</logo>
     <icon>https://SeverusNg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 蒟蒻博客</rights>
+    <entry>
+        <title type="html"><![CDATA[次小生成树学习笔记]]></title>
+        <id>https://SeverusNg.github.io/post/ci-xiao-sheng-cheng-shu-xue-xi-bi-ji/</id>
+        <link href="https://SeverusNg.github.io/post/ci-xiao-sheng-cheng-shu-xue-xi-bi-ji/">
+        </link>
+        <updated>2020-07-29T19:44:12.000Z</updated>
+        <content type="html"><![CDATA[<p>新坑待填</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重启博客]]></title>
         <id>https://SeverusNg.github.io/post/chong-qi-bo-ke/</id>
