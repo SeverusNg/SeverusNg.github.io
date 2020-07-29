@@ -9,7 +9,7 @@
 <meta name="description" content="蒟蒻爱吃蒟蒻～">
 <meta name="theme-color" content="#000">
 <title>重启博客 | 蒟蒻博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1595995251832">
+<link rel="shortcut icon" href="/favicon.ico?v=1595995509092">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -190,7 +190,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -235,6 +236,196 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%83%8C%E6%99%AF">背景</a></li>
+<li><a href="#%E8%A6%81%E5%B9%B2%E4%BB%80%E4%B9%88">要干什么</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -337,12 +528,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>523<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>628<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
@@ -356,7 +547,8 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>说来也巧，因为疫情，上了好几个月的网课，其实也就是摸了好几个月的鱼～<br>
+              <h2 id="背景">背景</h2>
+<p>说来也巧，因为疫情，上了好几个月的网课，其实也就是摸了好几个月的鱼～<br>
 最近在梁博老师的信息课上，遇到了一个初一的小孩，rui_er刷的题比我还多，知识点学的也比我丰富。而且我更羡慕的是他的年龄，才刚刚初一啊～梁老师在课上提到，学oi主要靠自学和做题，他认识的大佬都是自己主动积极打cf比赛，以及写题解博客。<br>
 我又不是巨佬，我只是一只爱吃蒟蒻的蒟蒻，但是听梁老师这么一说，想起来许久之前，我也建过一个博客。<br>
 还得从初三说起～<br>
@@ -368,6 +560,13 @@
 再一看效果展示，感觉很不错，仔细一看名字，我去，就是跟我一个课外班的那个初一同学——rui_er，这位巨佬初一就写的文章居然就上了洛谷日报......<br>
 然后呢，就是下载gridea，买了一个阿里云的学生优惠北京ECS，但是需要备案......<br>
 没办法，就只能用githu提供的仓库来搞，然后，就是现在这个样子～</p>
+<h2 id="要干什么">要干什么</h2>
+<p>话说这次重启博客和上一次不太一样，这一次我准备尝试长时间维护一下这个博客～<br>
+那么博客内容，我计划以下几点为主<br>
+1.信竞题解/笔记<br>
+2.各种计算机方面的东东<br>
+3.瞎扯淡～<br>
+貌似这3点（尤其是第3点），就已经囊括了所有我能接触到的内容～</p>
 
             </div>
             
@@ -1466,7 +1665,8 @@
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://SeverusNg.github.io/post/chong-qi-bo-ke/"" data-c="
-          &lt;p&gt;说来也巧，因为疫情，上了好几个月的网课，其实也就是摸了好几个月的鱼～&lt;br&gt;
+          &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;说来也巧，因为疫情，上了好几个月的网课，其实也就是摸了好几个月的鱼～&lt;br&gt;
 最近在梁博老师的信息课上，遇到了一个初一的小孩，rui_er刷的题比我还多，知识点学的也比我丰富。而且我更羡慕的是他的年龄，才刚刚初一啊～梁老师在课上提到，学oi主要靠自学和做题，他认识的大佬都是自己主动积极打cf比赛，以及写题解博客。&lt;br&gt;
 我又不是巨佬，我只是一只爱吃蒟蒻的蒟蒻，但是听梁老师这么一说，想起来许久之前，我也建过一个博客。&lt;br&gt;
 还得从初三说起～&lt;br&gt;
@@ -1478,6 +1678,13 @@
 再一看效果展示，感觉很不错，仔细一看名字，我去，就是跟我一个课外班的那个初一同学——rui_er，这位巨佬初一就写的文章居然就上了洛谷日报......&lt;br&gt;
 然后呢，就是下载gridea，买了一个阿里云的学生优惠北京ECS，但是需要备案......&lt;br&gt;
 没办法，就只能用githu提供的仓库来搞，然后，就是现在这个样子～&lt;/p&gt;
+&lt;h2 id=&#34;要干什么&#34;&gt;要干什么&lt;/h2&gt;
+&lt;p&gt;话说这次重启博客和上一次不太一样，这一次我准备尝试长时间维护一下这个博客～&lt;br&gt;
+那么博客内容，我计划以下几点为主&lt;br&gt;
+1.信竞题解/笔记&lt;br&gt;
+2.各种计算机方面的东东&lt;br&gt;
+3.瞎扯淡～&lt;br&gt;
+貌似这3点（尤其是第3点），就已经囊括了所有我能接触到的内容～&lt;/p&gt;
 ">重启博客</a>
       </div>
       
