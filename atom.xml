@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SeverusNg.github.io</id>
     <title>蒟蒻博客</title>
-    <updated>2020-07-29T21:31:23.402Z</updated>
+    <updated>2020-07-29T22:14:39.597Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SeverusNg.github.io"/>
     <link rel="self" href="https://SeverusNg.github.io/atom.xml"/>
@@ -28,7 +28,7 @@
 <p>把所有生成树按照权值之和从小到小排序，求排在第二位的生成树。注意，如果最小生成树不唯一，次小生成树的权值和最小生成树相同。</p>
 <h2 id="解法一">解法一</h2>
 <p>次小生成树不会和最小生成树相同，因此可以枚举最小生成树中不在次小生成树中出现的边。 注意最小生成树只有n-1条边，所以只需枚举n-1次。每次在剩下的边里，求一次最小生成树。</p>
-<h3 id="步骤">步骤</h3>
+<p>###步骤</p>
 <ol>
 <li>Kruskal算法求出最小生成树</li>
 <li>枚举最小生成树的每一条边，对这条边做标记，再进行一次Kruskal算法，Kruskal算法中，跳过被标记的边，求最小生成树，记录答案。</li>
@@ -42,7 +42,22 @@
 </ol>
 <p>总复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mi mathvariant="normal">（</mi><mi>N</mi><mi>M</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O（NM)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord cjk_fallback">（</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span></p>
 <p><strong>有没有更快些的解决方法呢？</strong></p>
-<p>（未完待续）</p>
+<h2 id="补充知识">补充知识</h2>
+<h3 id="可行交换与临集">可行交换与临集</h3>
+<ul>
+<li>T为图G的一棵生成树，对于非树边a和树边b，插入边a并且删除边b的操作记为(+a,-b)</li>
+<li>如果T+a-b仍然是一棵生成树，称(+a,-b)是一个可行交换</li>
+<li>由T进行一次可行交换以后得到的新的生成树的集合称为T的临集</li>
+</ul>
+<p>显然，可得定理：<strong><u>次小生成树在最小生成树的临集中</u></strong></p>
+<h2 id="更好的解法">更好的解法</h2>
+<ul>
+<li>枚举要加入哪条新边，在最小生成树中加入一条边u-v以后，图上会出现一条回路，如果想保持该图为生成树，需删除一条边，删除的边必须是在最小生成树上u到v的路径上，如果想要删除边后的新的生成树有可能为次小生成树，必须要求删除的边这条路径的最长边。</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://SeverusNg.github.io/post-images/1596060649544.png" alt="" loading="lazy"></figure>
+<p>如图，枚举出一条不在最小生成树上的边E1，如果连接E1，E1两端点为(1,4)，如果想连接E1后依然保证新图为生成树，需删除路径(1,4)上一条最小生成树上的边。为了求出<u><strong>次小</strong></u>生成树，我们选择删除原树上的尽可能大的边，即删除边(3,4)，连接边E1。</p>
+<figure data-type="image" tabindex="2"><img src="https://SeverusNg.github.io/post-images/1596060641167.png" alt="" loading="lazy"></figure>
+<p>如图为新生成的树。</p>
 ]]></content>
     </entry>
     <entry>
