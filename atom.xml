@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SeverusNg.github.io</id>
     <title>蒟蒻博客</title>
-    <updated>2020-07-30T01:07:23.777Z</updated>
+    <updated>2020-07-30T01:11:47.056Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SeverusNg.github.io"/>
     <link rel="self" href="https://SeverusNg.github.io/atom.xml"/>
@@ -35,7 +35,7 @@
 <p>把所有生成树按照权值之和从小到小排序，求排在第二位的生成树。注意，如果最小生成树不唯一，次小生成树的权值和最小生成树相同。</p>
 <h2 id="解法一"><strong>解法一</strong></h2>
 <p>次小生成树不会和最小生成树相同，因此可以枚举最小生成树中不在次小生成树中出现的边。 注意最小生成树只有n-1条边，所以只需枚举n-1次。每次在剩下的边里，求一次最小生成树。</p>
-<p>###<strong>步骤</strong></p>
+<h3 id="步骤">步骤</h3>
 <ol>
 <li>
 <p>Kruskal算法求出最小生成树</p>
@@ -142,7 +142,7 @@ long long lca(long long u,long long v,long long ma){
     return res;
 }
 </code></pre>
-<h3 id="步骤">步骤</h3>
+<h3 id="步骤-2">步骤</h3>
 <ol>
 <li>Kruskal算法求出最小生成树</li>
 <li>dfs预处理</li>

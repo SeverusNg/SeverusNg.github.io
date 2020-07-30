@@ -9,7 +9,7 @@
 <meta name="description" content="蒟蒻爱吃蒟蒻～">
 <meta name="theme-color" content="#000">
 <title>蒟蒻博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1596071241345">
+<link rel="shortcut icon" href="/favicon.ico?v=1596071504947">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1092,7 +1092,7 @@
 &lt;p&gt;把所有生成树按照权值之和从小到小排序，求排在第二位的生成树。注意，如果最小生成树不唯一，次小生成树的权值和最小生成树相同。&lt;/p&gt;
 &lt;h2 id=&#34;解法一&#34;&gt;&lt;strong&gt;解法一&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;次小生成树不会和最小生成树相同，因此可以枚举最小生成树中不在次小生成树中出现的边。 注意最小生成树只有n-1条边，所以只需枚举n-1次。每次在剩下的边里，求一次最小生成树。&lt;/p&gt;
-&lt;p&gt;###&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Kruskal算法求出最小生成树&lt;/p&gt;
@@ -1199,7 +1199,7 @@ long long lca(long long u,long long v,long long ma){
     return res;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;
+&lt;h3 id=&#34;步骤-2&#34;&gt;步骤&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Kruskal算法求出最小生成树&lt;/li&gt;
 &lt;li&gt;dfs预处理&lt;/li&gt;
